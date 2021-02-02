@@ -33,10 +33,7 @@ RUN chmod a+rwx /home/ubuntu/
 RUN mkdir /home/ubuntu/software ; exit 0
 
 ADD wic-sdk-1.2.1_Ubuntu16.06-x86_64_installer.run /home/ubuntu/software/.
-USER root
-RUN chmod +x /home/ubuntu/software/wic-sdk-1.2.1_Ubuntu16.06-x86_64_installer.run
-# RUN /home/ubuntu/software/wic-sdk-1.2.1_Ubuntu16.06-x86_64_installer.run ; exit 0
-USER ubuntu
+
 
 # Run Jupytewr notebook as Docker main process
 CMD ["bash"]
