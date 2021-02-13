@@ -2,6 +2,9 @@
 # guide taken from http://www.science.smith.edu/dftwiki/index.php/Tutorial:_Docker_Anaconda_Python_--_4
 FROM ubuntu:latest
 
+# MÉTADONNÉES DE L'IMAGE
+LABEL version="1.0" maintainer="DAGORET-CAMPAGNE sylvie <dagoret.lal.in2p3.fr>"
+
 # Updating Ubuntu packages
 RUN apt-get update && yes|apt-get upgrade
 RUN apt-get install -y emacs
@@ -47,7 +50,7 @@ ENV PATH /home/ubuntu/anaconda3/bin:$PATH
 RUN conda update conda
 RUN conda update anaconda
 RUN conda update --all
-RUN conda install --yes cython numpy scipy pytest pylint coveralls matplotlib astropy  mpi4py 
+RUN conda install --yes cython numpy scipy pytest pylint coveralls matplotlib astropy mpi4py 
 
 # install Delight in the container
 ADD Delight Delight
