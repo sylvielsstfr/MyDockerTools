@@ -1,2 +1,2 @@
 #!/bin/bash
-docker rmi delight
+docker rmi delightrail

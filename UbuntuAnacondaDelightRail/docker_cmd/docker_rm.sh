@@ -1,2 +1,2 @@
 #!/bin/bash
-docker stop delightc
+docker rm delightrailc

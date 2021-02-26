@@ -1,2 +1,2 @@
 #!/bin/bash
-docker logs delightc
+docker logs delightrailc
