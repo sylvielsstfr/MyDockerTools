@@ -3,18 +3,20 @@
 FROM ubuntu:latest
 
 # MÉTADONNÉES DE L'IMAGE
-LABEL version="1.0" maintainer="DAGORET-CAMPAGNE sylvie <dagoret.lal.in2p3.fr>"
+LABEL version="1.1" maintainer="DAGORET-CAMPAGNE sylvie <dagoret.lal.in2p3.fr>"
 
 # Updating Ubuntu packages
 RUN apt-get update && yes|apt-get upgrade
+RUN apt-get clean 
 RUN apt-get install -y emacs
 RUN apt-get install -y xterm
+RUN apt-get install -y x11-apps
 
 #Adding wget and bzip2
 RUN apt-get install -y wget bzip2
 
 #adding git
-RUN apt install -y git-all
+RUN apt install -y git
 
 #adding gcc
 RUN apt install -y build-essential
@@ -34,10 +36,6 @@ RUN chmod a+rwx /home/ubuntu/
 RUN echo `pwd`
 
 # Anaconda installing
-#RUN wget https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
-#RUN bash Anaconda3-5.0.1-Linux-x86_64.sh -b
-#RUN rm Anaconda3-5.0.1-Linux-x86_64.sh
-
 RUN wget https://repo.continuum.io/archive/Anaconda3-2020.11-Linux-x86_64.sh
 RUN bash Anaconda3-2020.11-Linux-x86_64.sh -b
 RUN rm Anaconda3-2020.11-Linux-x86_64.sh

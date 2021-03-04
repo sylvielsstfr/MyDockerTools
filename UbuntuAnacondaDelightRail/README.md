@@ -54,3 +54,7 @@ open the Browser from outside the container
 > localhost:8888
 
 provide root as password
+
+
+If build is not working do docker general cleaning
+docker prune -a 
