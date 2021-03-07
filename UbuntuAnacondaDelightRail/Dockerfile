@@ -49,7 +49,8 @@ RUN conda update conda
 RUN conda update anaconda
 RUN conda update --all
 RUN conda install --yes cython numpy scipy pytest pylint pycodestyle coveralls matplotlib astropy mpi4py sphinx coloredlogs
-RUN conda install --yes h5py pyyaml pyarrow 
+RUN conda install --yes h5py pyyaml pyarrow
+RUN conda install --yes -c conda-forge emcee 
 RUN pip install tables
 
 # install Delight in the container
