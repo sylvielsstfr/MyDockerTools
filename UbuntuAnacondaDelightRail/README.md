@@ -57,4 +57,4 @@ provide root as password
 
 
 If build is not working do docker general cleaning
-docker prune -a 
+docker system prune -a 
