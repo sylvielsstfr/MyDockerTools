@@ -1,0 +1,14 @@
+# pleora 
+export GENICAM_ROOT_V3_0=/opt/pleora/ebus_sdk/Ubuntu-x86_64/lib/genicam/
+export GENICAM_LOG_CONFIG=/opt/pleora/ebus_sdk/Ubuntu-x86_64/lib/genicam/log/config/DefaultLogging.properties
+export GENICAM_LOG_CONFIG_V3_0=$GENICAM_LOG_CONFIG
+export GENICAM_CACHE_V3_0=$HOME/.config/Pleora/genicam_cache_v3_0
+export GENICAM_CACHE=$GENICAM_CACHE_V3_0
+
+export LD_LIBRARY_PATH=/opt/pleora/ebus_sdk/Ubuntu-x86_64/lib/genicam/bin/Linux64_x64:/opt/pleora/ebus_sdk/Ubuntu-x86_64/lib:${LD_LIBRARY_PATH}
+
+
+
+# WIC
+WIC_ROOT=/opt/workswell/wic_sdk
+export LD_LIBRARY_PATH=${WIC_ROOT}/lib:${LD_LIBRARY_PATH}
