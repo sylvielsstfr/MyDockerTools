@@ -69,6 +69,7 @@ RUN conda update conda
 RUN conda update anaconda
 RUN conda update --all
 RUN conda install --yes cython numpy scipy pytest pylint pycodestyle coveralls matplotlib astropy mpi4py sphinx coloredlogs
+RUN conda install --yes -c conda-forge healpy 
 RUN conda install --yes h5py pyyaml pyarrow
 RUN conda install --yes -c conda-forge emcee 
 RUN conda install --yes -c conda-forge corner
@@ -80,7 +81,8 @@ ADD TXPipe TXPipe
 USER root
 WORKDIR /home/ubuntu/TXPipe
 RUN chmod a+rwx /home/ubuntu/TXPipe
-RUN pip install --no-binary=mpi4py,healpy -r requirements.txt
+#RUN pip install --no-binary=mpi4py,healpy -r requirements.txt
+RUN pip install -r requirements.txt
 
 
 
