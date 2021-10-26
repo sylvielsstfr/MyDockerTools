@@ -36,9 +36,13 @@ RUN chmod a+rwx /home/ubuntu/
 RUN echo `pwd`
 
 # Anaconda installing
-RUN wget https://repo.continuum.io/archive/Anaconda3-2020.11-Linux-x86_64.sh
-RUN bash Anaconda3-2020.11-Linux-x86_64.sh -b
-RUN rm Anaconda3-2020.11-Linux-x86_64.sh
+#RUN wget https://repo.continuum.io/archive/Anaconda3-2020.11-Linux-x86_64.sh
+#RUN bash Anaconda3-2020.11-Linux-x86_64.sh -b
+#RUN rm Anaconda3-2020.11-Linux-x86_64.sh
+
+RUN wget https://repo.continuum.io/archive/Anaconda3-2021.05-Linux-x86_64.sh
+RUN bash Anaconda3-2021.05-Linux-x86_64.sh -b
+RUN rm Anaconda3-2021.05-Linux-x86_64.sh
 
 # Set path to conda
 #ENV PATH /root/anaconda3/bin:$PATH
@@ -48,7 +52,7 @@ ENV PATH /home/ubuntu/anaconda3/bin:$PATH
 RUN conda update conda
 RUN conda update anaconda
 RUN conda update --all
-RUN conda install --yes  matplotlib astropy mpi4py sphinx coloredlogs
+RUN conda install --yes matplotlib astropy mpi4py sphinx coloredlogs
 RUN conda install --yes h5py pyyaml pyarrow
 RUN conda install --yes -c conda-forge emcee 
 RUN conda install --yes -c conda-forge corner
@@ -69,9 +73,9 @@ USER root
 WORKDIR /home/ubuntu/RAIL
 RUN chmod a+rwx /home/ubuntu/RAIL
 RUN pip install -e .[all]
-RUN python setup.py install
 RUN pip install xgboost
 RUN pip install flexcode
+RUN python setup.py install
 
 
 USER ubuntu

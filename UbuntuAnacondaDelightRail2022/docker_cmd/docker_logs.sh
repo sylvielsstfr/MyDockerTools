@@ -1,2 +1,2 @@
 #!/bin/bash
-docker logs delightrailc
+docker logs delightrail2022c

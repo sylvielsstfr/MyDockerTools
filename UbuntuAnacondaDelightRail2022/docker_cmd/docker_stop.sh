@@ -1,2 +1,2 @@
 #!/bin/bash
-docker stop delightrailc
+docker stop delightrail2022c

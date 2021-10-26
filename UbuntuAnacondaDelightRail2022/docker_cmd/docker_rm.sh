@@ -1,2 +1,2 @@
 #!/bin/bash
-docker rm delightrailc
+docker rm delightrail2022c
